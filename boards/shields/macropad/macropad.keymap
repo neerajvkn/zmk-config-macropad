@@ -16,7 +16,6 @@
                 &kp C_PREV      &kp C_NEXT
             >;
 
-            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             sensor-bindings = <&inc_dec_kp C_FAST_FWD C_REWIND>;
 
             // Rotary encode button press
