@@ -1,0 +1,25 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // -----------------------------------------------------
+            // | ROTARY (VOL+/VOL-, PLAY/PAUSE) |   Reset          |
+            // |         PREV                   |   NEXT           |
+            // -----------------------------------------------------
+            bindings = <
+                &kp A           &bootloader
+                &kp C_PREV      &kp C_NEXT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+            // Rotary encode button press
+            // button-bindings = <&kp C_PP>;
+        };
+    };
+};

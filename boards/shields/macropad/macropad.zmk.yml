@@ -1,0 +1,10 @@
+file_format: "1"
+id: macropad
+name: Macropad
+type: shield
+url: https://github.com/neerajvkn/zmk-config-macropad
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
+  - studio
