@@ -54,6 +54,24 @@
         sensors = <&right_encoder>;
         triggers-per-rotation = <20>;
     };
+
+    i2c1: i2c_1 {
+        compatible = "nordic,nrf-twim";
+        status = "okay";
+        sda-pin = <0>;  // GPIO0
+        scl-pin = <1>;  // GPIO1
+        clock-frequency = <I2C_BITRATE_FAST>; // 400kHz
+
+        oled_display: ssd1306@3c {
+            compatible = "solomon,ssd1306fb";
+            reg = <0x3C>;  // I2C address of the OLED
+            width = <128>;
+            height = <32>;
+            segment-offset = <0>;
+            page-offset = <0>;
+            label = "SSD1306";
+        };
+    };
 };
 
 &layout_ortho_4x12_all1u {
