@@ -55,7 +55,7 @@
         triggers-per-rotation = <20>;
     };
 
-    &i2c1 {
+    &i2c0 {
         status = "okay";
         sda-pin = <0>;  // GPIO0
         scl-pin = <1>;  // GPIO1
