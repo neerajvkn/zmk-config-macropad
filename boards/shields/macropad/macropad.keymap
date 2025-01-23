@@ -7,20 +7,14 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------
-            // | ROTARY (VOL+/VOL-, PLAY/PAUSE) |   Reset          |
-            // |         PREV                   |   NEXT           |
-            // -----------------------------------------------------
             bindings = <
-                &kp A           &bootloader
-                &kp C_PREV      &kp C_NEXT
+                &kp A &kp B &kp C &kp D
+                &kp E &kp F &kp G &kp H
+                &kp I &kp J &kp K &kp L
+                &kp M &kp N &kp O &kp P
             >;
 
             sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND>;
-           // sensor-bindings = <&inc_dec_kp C_FAST_FWD C_REWIND>;
-
-            // Rotary encode button press
-            // button-bindings = <&kp C_PP>;
         };
     };
 };
