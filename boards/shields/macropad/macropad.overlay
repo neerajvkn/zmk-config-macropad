@@ -55,12 +55,10 @@
         triggers-per-rotation = <20>;
     };
 
-    i2c1: i2c_1 {
-        compatible = "nordic,nrf-twim";
+    &i2c1 {
         status = "okay";
         sda-pin = <0>;  // GPIO0
         scl-pin = <1>;  // GPIO1
-        clock-frequency = <I2C_BITRATE_FAST>; // 400kHz
 
         oled_display: ssd1306@3c {
             compatible = "solomon,ssd1306fb";
