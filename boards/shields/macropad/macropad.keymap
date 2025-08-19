@@ -26,7 +26,7 @@
                       /* D10         D16      D14        D15       D19       D21  */
                 /* D7 */  &screenshot_clip     &kp B     &kp C     &kp D     &trans    &trans
                 /* D8 */  &kp E     &kp F     &kp G     &kp H     &trans    &trans
-                /* D9 */  &kp I     &kp J     &kp K     &kp L     &trans    &trans
+                /* D9 */  &kp I     &kp J     &kp K     &bt BT_CLR     &trans    &trans
 
                 /* Encoder left - D18:D19 */
                 /* D18 */ &trans    &trans    &trans    &trans    &kp W     &trans
