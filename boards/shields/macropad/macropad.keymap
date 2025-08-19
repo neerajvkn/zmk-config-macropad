@@ -21,7 +21,7 @@
                 /* D18 */ &trans    &trans    &trans    &trans    &kp W     &trans
 
                 /* Encoder right - D*/
-                /* D20 */ &kp 1     &kp 2     &kp 3     &kp 4     &kp 5     &kp 6
+                /* D20 */ &kp M    &kp N     &kp O     &kp P     &kp Q     &kp R
             >;
 
             // rotary encoder up and down
