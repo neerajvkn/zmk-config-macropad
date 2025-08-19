@@ -17,11 +17,8 @@
                 &kp I           &kp J       &kp K       &kp L
             >;
 
-            // First encoder → Volume up/down
-            encoder-bindings-0 = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
-
-            // Second encoder → Track next/previous
-            encoder-bindings-1 = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
+            // rotary encoder up and down
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>>;
         };
     };
 };
