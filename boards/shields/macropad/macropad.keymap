@@ -3,6 +3,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        screenshot_clip: screenshot_clip {
+            compatible = "zmk,behavior-macro";
+            label = "Screenshot to Clipboard";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LG(LS(LC(N4)))    /* cmd + shift + ctrl + 4 */
+            >;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -13,7 +24,7 @@
             // -----------------------------------------------------
             bindings = <
                       /* D10         D16      D14        D15       D19       D21  */
-                /* D7 */  &kp A     &kp B     &kp C     &kp D     &trans    &trans
+                /* D7 */  &screenshot_clip     &kp B     &kp C     &kp D     &trans    &trans
                 /* D8 */  &kp E     &kp F     &kp G     &kp H     &trans    &trans
                 /* D9 */  &kp I     &kp J     &kp K     &kp L     &trans    &trans
 
@@ -21,7 +32,7 @@
                 /* D18 */ &trans    &trans    &trans    &trans    &kp W     &trans
 
                 /* Encoder right - D*/
-                /* D20 */ &kp M    &kp N     &kp O     &kp P     &kp Q     &kp R
+                /* D20 */ &trans    &trans    &trans    &trans    &trans     &kp R
             >;
 
             // rotary encoder up and down
