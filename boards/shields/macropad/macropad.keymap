@@ -20,7 +20,7 @@
             // rotary encoder up and down
             sensor-bindings = <&inc_dec_kp C_FAST_FORWARD C_REWIND>;
             //Rotaty encoder button press
-            button-bindings = <&kp C_PP>;
+            //button-bindings = <&kp C_PP>;
         };
     };
 };
