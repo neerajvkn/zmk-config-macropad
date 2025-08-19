@@ -17,10 +17,10 @@
                 /* Row 2 */ &kp I    &kp J    &kp K    &kp L    &trans    &trans
 
                 /* Row 3 → Left Encoder Btn: D18 + D19 */
-                &kp M    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans  &kp M
 
                 /* Row 4 → Right Encoder Btn: D20 + D21 */
-                &kp N    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &kp N   &trans
             >;
 
             // rotary encoder up and down
