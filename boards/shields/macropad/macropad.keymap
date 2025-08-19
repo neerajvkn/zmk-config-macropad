@@ -12,15 +12,15 @@
             // |         PREV                   |   NEXT           |
             // -----------------------------------------------------
             bindings = <
-                /* Row 0 */ &kp A    &kp B    &kp C    &kp D    &kp M    &kp N
-                /* Row 1 */ &kp E    &kp F    &kp G    &kp H    &kp O    &kp P
-                /* Row 2 */ &kp I    &kp J    &kp K    &kp L    &kp Q    &kp R
+                /* Row 0 */ &kp A    &kp B    &kp C    &kp D    &trans    &trans
+                /* Row 1 */ &kp E    &kp F    &kp G    &kp H    &trans    &trans
+                /* Row 2 */ &kp I    &kp J    &kp K    &kp L    &trans    &trans
 
                 /* Row 3 → Left Encoder Btn: D18 + D19 */
-                &kp S    &kp T    &kp U    &kp V    &kp W  &kp X
+                &trans    &trans    &trans    &trans    &kp W  &trans
 
                 /* Row 4 → Right Encoder Btn: D20 + D21 */
-                &kp Y    &kp Z    &kp 1    &kp 2    &kp 3   &kp 4
+                &kp 1    &kp 2    &kp 3    &kp 4    &kp 5   &kp 6
             >;
 
             // rotary encoder up and down
