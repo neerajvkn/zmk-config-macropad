@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# Simple script to add, commit, and push changes to Git
+if [ -z "$1" ]; then
+    commit_message="fix"
+else
+    commit_message="$1"
+fi
 
 echo "Adding all files..."
 git add .
 
-echo "Committing changes..."
-git commit -m "fix"
+echo "Committing with message: $commit_message"
+git commit -m "$commit_message"
 
 echo "Pushing to remote..."
 git push
