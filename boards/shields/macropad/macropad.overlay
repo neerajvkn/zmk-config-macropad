@@ -25,20 +25,23 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&pro_micro 1 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 0 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 10 GPIO_ACTIVE_HIGH>  /* C0 -> D10 */
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>  /* C1 -> D16 */
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>  /* C2 -> D14 */
+            , <&pro_micro 15 GPIO_ACTIVE_HIGH>  /* C3 -> D15 */
             ;
 
         row-gpios
-            = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* R0 -> D7 */
+            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* R1 -> D8 */
+            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* R2 -> D9 */
             ;
     };
 
     right_encoder: encoder {
         compatible = "alps,ec11";
-        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
     };
