@@ -33,7 +33,7 @@
             <&pro_micro 14 GPIO_ACTIVE_HIGH>,  /* C2 -> D14 */
             <&pro_micro 15 GPIO_ACTIVE_HIGH>,  /* C3 -> D15 */
             <&pro_micro 19 GPIO_ACTIVE_HIGH>,  /* C4 -> Left Encoder Btn second pin */
-            <&pro_micro 21 GPIO_ACTIVE_HIGH>;  /* C5 -> Right Encoder Btn second pin */
+            <&pro_micro 5 GPIO_ACTIVE_HIGH>;  /* C5 -> Right Encoder Btn second pin */
 
         /* ----- 5 ROWS (3 normal + 2 encoder buttons) ----- */
         row-gpios =
@@ -41,14 +41,14 @@
             <&pro_micro 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* R1 -> D8 */
             <&pro_micro 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* R2 -> D9 */
             <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,  /* R3 -> Left Encoder Btn first pin */
-            <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  /* R4 -> Right Encoder Btn first pin */
+            <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;  /* R4 -> Right Encoder Btn first pin */
     };
 
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
-        a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "okay";
     };

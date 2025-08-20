@@ -1,0 +1,25 @@
+open vscode
+open iterm
+open firefox
+next
+prev
+copy
+paste
+lock pc
+play / pause
+screenshot select area option
+quit app -> cmd + q
+
+
+1 key + open vscode -> open current folder in vscode
+1 key + open terminal -> open terminal in current folder
+
+row 3 -> 1st button keep pressed -> 2nd button moves active windo to second monitor in full screen, 3rd to 2nd screen, 4th to 3rd screen - install rectangle and set up shortcut keys - set that shortcut on zmk
+
+encoder right -> vol up, vol down, mute
+encoder right pressed and rotated -> seek front and back for current track
+
+encoder left -> scroll left to right, go to page extreme left on click
+encoder left -> pressed and rotated -> switch device ( show in display which device )
+
+both encoders pressed together -> clear BLE
