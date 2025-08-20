@@ -26,13 +26,13 @@
                 /*              D10              D16       D14       D15              D19      D21  */
                 /* D7 */  &screenshot_clip      &kp B     &kp C     &kp D           &trans    &trans
                 /* D8 */  &kp E                 &kp F     &kp G     &kp H           &trans    &trans
-                /* D9 */  &kp I                 &kp J     &kp K     &bt L      &trans    &trans
+                /* D9 */  &kp I                 &kp J     &kp K     &kp L           &trans    &trans
 
                 /* Encoder left - D18:D19 */
-                /* D18 */ &trans    &trans    &trans    &trans    &kp W     &trans
+                /* D18 */ &kp 1                &kp 3    &kp 5    &kp 7           &kp W     &kp X
 
                 /* Encoder right - D*/
-                /* D20 */ &trans    &trans    &trans    &trans    &trans     &kp R
+                /* D20 */ &kp 2                &kp 4    &kp 6    &kp 8           &kp Y     &kp R
             >;
 
             // rotary encoder up and down
