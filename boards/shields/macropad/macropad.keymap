@@ -18,7 +18,7 @@
             label = "Cmd+Q";
             #binding-cells = <0>;
             bindings = <
-                &kp LG(LS(LC(N4)))      /* cmd + shift + ctrl + 4 */
+                &kp LG(Q) /* cmd + q*/
             >;
         };
 
