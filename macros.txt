@@ -6,28 +6,33 @@
 | Screenshot |  
 
 
-
-quit app -> cmd + q
-modifier key 
-open vscode
-open iterm
-open firefox
-
-lock pc
+Row - 1
+--------
+quit app on double tap / modifier
 prev
 play / pause
 next
 
-copy
+Row - 2
+open finder / modifier key
+open vscode
+open iterm
+open firefox
+
+modifier + open vscode -> open current folder in vscode
+modifier + open terminal -> open terminal in current folder
+modifier + firefix will open and search current selected word in google.
+
+Row - 3
+--------
+copy / modifer
 paste
 screenshot select area option
+lock pc
 
-
-1 key + open vscode -> open current folder in vscode
-1 key + open terminal -> open terminal in current folder
-1 key + firefix will open and search current selected word in google.
-
-row 3 -> 1st button keep pressed -> 2nd button moves active windo to second monitor in full screen, 3rd to 2nd screen, 4th to 3rd screen - install rectangle and set up shortcut keys - set that shortcut on zmk
+modifer + paste -> move window to screen 1
+modifer + screnshot -> move window to screen 2
+modifer + lock pc -> move window to screen 3
 
 encoder right -> vol up, vol down, mute
 encoder right pressed and rotated -> seek front and back for current track
@@ -35,4 +40,4 @@ encoder right pressed and rotated -> seek front and back for current track
 encoder left -> scroll left to right, go to page extreme left on click
 encoder left -> pressed and rotated -> switch device ( show in display which device )
 
-both encoders pressed together -> clear BLE
+both encoders pressed together -> clear bluetooth profiles

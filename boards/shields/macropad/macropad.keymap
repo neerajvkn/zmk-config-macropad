@@ -22,13 +22,6 @@
             >;
         };
 
-        // td_cmd_q: td_cmd_q {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "Double-tap for Cmd+Q";
-        //     #binding-cells = <0>;
-        //     bindings = <&trans>, <&cmd_q_macro>;
-        //     // tap-count = <2>;
-        // };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -41,26 +34,29 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------
-            // | ROTARY (VOL+/VOL-, PLAY/PAUSE) |   Reset          |
-            // |         PREV                   |   NEXT           |
-            // -----------------------------------------------------
+            // ------------------------------------
+            // | R1    |                 | R2     |
+            // ------------------------------------
+            // | KEY 1 | KEY 2  | KEY 3  | KEY 4  |
+            // | KEY 5 | KEY 6  | KEY 7  | KEY 8  |
+            // | KEY 9 | KEY 10 | KEY 11 | KEY 12 |
+            // ------------------------------------
             bindings = <
-                /*              D10              D16       D14       D15              D19      D21  */
-                /* D7 */  &screenshot_clip      &td0     &kp C     &kp D           &trans    &trans
-                /* D8 */  &kp E                 &kp F     &kp G     &kp H           &trans    &trans
-                /* D9 */  &kp I                 &kp J     &kp K     &bt BT_CLR           &trans    &trans
+                /*         D10          D16             D14                     D15                 D19         D4  */
+                /* D7 */  &td0          &kp C_PREV      &kp C_PLAY_PAUSE        &kp C_NEXT          &trans      &trans
+                /* D8 */  &kp E         &kp F           &kp G                   &kp H               &trans      &trans
+                /* D9 */  &kp LG(C)     &kp LG(V)       &screenshot_clip        &kp LC(LG(Q))       &trans      &trans
 
                 /* Encoder left - D18:D19 */
-                /* D18 */ &kp 1                &kp 3    &kp 5    &kp 7           &kp W     &kp X
+                /* D18 */ &trans        &trans          &trans                  &trans              &bt BT_CLR  &trans
 
-                /* Encoder right - D*/
-                /* D20 */ &kp 2                &kp 4    &kp 6    &kp 8           &kp Y     &kp C_MUTE
+                /* Encoder right - D4:D5 */
+                /* D5 */  &trans        &trans          &trans                  &trans              &trans      &kp C_MUTE
             >;
+//        // Copy (⌘ + C)
+    //         // Paste (⌘ + V)
+    //     // Lock Screen (⌃ + ⌘ + Q)
 
-            // rotary encoder up and down
-            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>>;
-            // sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 
