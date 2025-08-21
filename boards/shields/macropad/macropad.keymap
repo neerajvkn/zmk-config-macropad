@@ -27,7 +27,7 @@
             label = "Double-tap for Cmd+Q";
             #binding-cells = <0>;
             bindings = <&trans>, <&cmd_q_macro>;
-            tap-count = <2>;
+            // tap-count = <2>;
         };
     };
 
