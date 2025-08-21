@@ -1,15 +1,26 @@
+----------------------------------
+| Quit | Prev | Play/Pause | Next |
+
+| Mod | VScode | Iterm | Firefox |
+
+| Screenshot |  
+
+
+
+quit app -> cmd + q
 modifier key 
 open vscode
 open iterm
 open firefox
-next
+
+lock pc
 prev
+play / pause
+next
+
 copy
 paste
-lock pc
-play / pause
 screenshot select area option
-quit app -> cmd + q
 
 
 1 key + open vscode -> open current folder in vscode

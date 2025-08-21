@@ -12,6 +12,23 @@
                 &kp LG(LS(LC(N4)))    /* cmd + shift + ctrl + 4 */
             >;
         };
+
+        cmd_q_macro: cmd_q_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Cmd+Q";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LC(LGUI(Q))      /* Cmd+Q */
+            >;
+        };
+
+        td_cmd_q: td_cmd_q {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Double-tap for Cmd+Q";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&cmd_q_macro>;
+            tap-count = <2>;
+        };
     };
 
     keymap {
@@ -24,7 +41,7 @@
             // -----------------------------------------------------
             bindings = <
                 /*              D10              D16       D14       D15              D19      D21  */
-                /* D7 */  &screenshot_clip      &kp B     &kp C     &kp D           &trans    &trans
+                /* D7 */  &screenshot_clip      &td_cmd_q     &kp C     &kp D           &trans    &trans
                 /* D8 */  &kp E                 &kp F     &kp G     &kp H           &trans    &trans
                 /* D9 */  &kp I                 &kp J     &kp K     &bt BT_CLR           &trans    &trans
 
@@ -52,7 +69,7 @@
         bt_clear_combo {
             timeout-ms = <50>;                 // Time window to press both keys
             key-positions = <28 35>;           // Positions of W and R in your keymap
-            bindings = <&kp A>;           // Trigger Bluetooth clear
+            bindings = <&kp A>;                // Trigger Bluetooth clear
         };
     };
 };
