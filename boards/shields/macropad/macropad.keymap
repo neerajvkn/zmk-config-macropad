@@ -13,21 +13,27 @@
             >;
         };
 
-        cmd_q_macro: cmd_q_macro {
-            compatible = "zmk,behavior-macro";
-            label = "Cmd+Q";
-            #binding-cells = <0>;
-            bindings = <
-                &kp LG(LS(LC(N4)))      /* cmd + shift + ctrl + 4 */
-            >;
-        };
+        // cmd_q_macro: cmd_q_macro {
+        //     compatible = "zmk,behavior-macro";
+        //     label = "Cmd+Q";
+        //     #binding-cells = <0>;
+        //     bindings = <
+        //         &kp LG(LS(LC(N4)))      /* cmd + shift + ctrl + 4 */
+        //     >;
+        // };
 
-        td_cmd_q: td_cmd_q {
+        // td_cmd_q: td_cmd_q {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     label = "Double-tap for Cmd+Q";
+        //     #binding-cells = <0>;
+        //     bindings = <&trans>, <&cmd_q_macro>;
+        //     // tap-count = <2>;
+        // };
+        td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "Double-tap for Cmd+Q";
             #binding-cells = <0>;
-            bindings = <&trans>, <&cmd_q_macro>;
-            // tap-count = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
     };
 
@@ -41,7 +47,7 @@
             // -----------------------------------------------------
             bindings = <
                 /*              D10              D16       D14       D15              D19      D21  */
-                /* D7 */  &screenshot_clip      &td_cmd_q     &kp C     &kp D           &trans    &trans
+                /* D7 */  &screenshot_clip      &td0     &kp C     &kp D           &trans    &trans
                 /* D8 */  &kp E                 &kp F     &kp G     &kp H           &trans    &trans
                 /* D9 */  &kp I                 &kp J     &kp K     &bt BT_CLR           &trans    &trans
 
