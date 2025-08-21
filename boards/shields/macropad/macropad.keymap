@@ -13,14 +13,14 @@
             >;
         };
 
-        // cmd_q_macro: cmd_q_macro {
-        //     compatible = "zmk,behavior-macro";
-        //     label = "Cmd+Q";
-        //     #binding-cells = <0>;
-        //     bindings = <
-        //         &kp LG(LS(LC(N4)))      /* cmd + shift + ctrl + 4 */
-        //     >;
-        // };
+        cmd_q_macro: cmd_q {
+            compatible = "zmk,behavior-macro";
+            label = "Cmd+Q";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LG(LS(LC(N4)))      /* cmd + shift + ctrl + 4 */
+            >;
+        };
 
         // td_cmd_q: td_cmd_q {
         //     compatible = "zmk,behavior-tap-dance";
@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+            bindings = <&trans>, <&cmd_q_macro>;
         };
     };
 
