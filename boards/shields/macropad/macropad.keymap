@@ -32,12 +32,23 @@
                 /* D18 */ &kp 1                &kp 3    &kp 5    &kp 7           &kp W     &kp X
 
                 /* Encoder right - D*/
-                /* D20 */ &kp 2                &kp 4    &kp 6    &kp 8           &kp Y     &kp R
+                /* D20 */ &kp 2                &kp 4    &kp 6    &kp 8           &kp Y     &kp C_MUTE
             >;
 
             // rotary encoder up and down
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>>;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp MS_WH_UP MS_WH_DOWN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        // W + R => Clear all Bluetooth pairings
+        bt_clear_combo {
+            timeout-ms = <50>;                 // Time window to press both keys
+            key-positions = <28 35>;           // Positions of W and R in your keymap
+            bindings = <&bt BT_CLR>;           // Trigger Bluetooth clear
         };
     };
 };
